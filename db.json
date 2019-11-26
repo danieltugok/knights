@@ -1,9 +1,48 @@
 {
-    "posts": [
-      { "id": 1, "title": "json-server", "author": "typicode" }
-    ],
-    "comments": [
-      { "id": 1, "body": "some comment", "postId": 1 }
-    ],
-    "profile": { "name": "typicode" }
-  }
+    "knights": [
+        {
+            "name": "John Snow",
+            "nickname": "Bastardo",
+            "birthday": "10/08/2002",
+            "weapons": [
+                {
+                "name": "sword",
+                "mod": 3,
+                "attr": "strength",
+                "equipped": true
+                }
+            ],
+            "attributes": {
+                "strength": 16,
+                "dexterity": 17,
+                "constitution": 18,
+                "intelligence": 10,
+                "wisdom": 13,
+                "charisma": 15
+            },    
+            "keyAttribute": "strength"
+        },
+        {
+            "name": "Jaime Lannister",
+            "nickname": "Regicida",
+            "birthday": "10/08/1985",
+            "weapons": [
+                {
+                "name": "sword",
+                "mod": 4,
+                "attr": "strength",
+                "equipped": true
+                }
+            ],
+            "attributes": {
+                "strength": 14,
+                "dexterity": 13,
+                "constitution": 18,
+                "intelligence": 16,
+                "wisdom": 15,
+                "charisma": 18
+            },    
+            "keyAttribute": "strength"
+        }
+    ]
+}
