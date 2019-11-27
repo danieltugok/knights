@@ -75,7 +75,7 @@ export default {
 	methods: {
 		getChipColor(attribute) {
 			if(attribute === this.hero.keyAttribute){
-				return "indigo"
+				return "#D4AF37"
 			} else {
 				return "grey"
 			}
