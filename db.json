@@ -28,8 +28,8 @@
             "birthday": "10/08/1985",
             "weapons": [
                 {
-                "name": "sword",
-                "mod": 4,
+                "name": "axe",
+                "mod": 2,
                 "attr": "strength",
                 "equipped": true
                 }
@@ -42,7 +42,7 @@
                 "wisdom": 15,
                 "charisma": 18
             },    
-            "keyAttribute": "strength"
+            "keyAttribute": "charisma"
         },
         {
             "name": "Brienne de Tarth",
@@ -64,7 +64,7 @@
                 "wisdom": 16,
                 "charisma": 10
             },    
-            "keyAttribute": "strength"
+            "keyAttribute": "dexterity"
         }
     ]
 }

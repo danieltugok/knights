@@ -1,34 +1,34 @@
 <template>
-    <div>
-        
-        <div class="table-knights">
-            <v-data-table
-                :headers="headers"
-                :items="knightList"
-                :no-data-text="'Nenhum item encontrado'"
-                item-key="name"
-            >
-                <template v-slot:item.age="{ knight }">
-                    {{ formatAge(knight) }}
-                </template>
+    
+    <div class="table-knights">
+        <v-data-table
+            :headers="headers"
+            :items="knightList"
+            :no-data-text="'Nenhum item encontrado'"
+            item-key="name"
+        >
+            <template v-slot:item.age="{ item }">
+                {{ formatAge(item) }}
+            </template>
 
-                <template v-slot:item.weaponsAmount="{ knight }">
-                    {{ formatWeaponsAmount(knight.weapons) }}
-                </template>
+            <template v-slot:item.weaponsAmount="{ item }">
+                {{ formatWeaponsAmount(item.weapons) }}
+            </template>
 
-                <template v-slot:item.atack="{ knight }">
-                    {{ formatAttack(knight) }}
-                </template>
+            <template v-slot:item.atack="{ item }">
+                {{ formatAttack(item) }}
+            </template>
 
-                <template v-slot:item.exp="{ knight }">
-                    {{ formatExt(knight) }}
-                </template>
-            </v-data-table>
-        </div>
+            <template v-slot:item.exp="{ item }">
+                {{ formatExp(item) }}
+            </template>
+        </v-data-table>
     </div>
+    
 </template>
 
 <script>
+import getMod from '../functions/mod'
 
 export default {
     
@@ -43,7 +43,8 @@ export default {
                 { text: 'Exp'     , value: 'exp' },
             ],
 
-            knightList: []
+            knightList: [],
+            getModFunction: getMod
         }
     },
     
@@ -65,11 +66,11 @@ export default {
                 })
         },
 
-        formatAge(knight) {
+        getAgeByBirthday(birthday) {
             //NOTA - a título de avaliação, decidi não usar o moment.js para obter essa informação.
-            
+
             const today = new Date(),
-                  splittedKnightBirthdayDate = knight.birthday.split("/"),
+                  splittedKnightBirthdayDate = birthday.split("/"),
                   knightBirthdayDateObject = new Date(+splittedKnightBirthdayDate[2], splittedKnightBirthdayDate[1] - 1, +splittedKnightBirthdayDate[0]),
                   
                   knightBirthdayDay = knightBirthdayDateObject.getDate(),
@@ -86,7 +87,12 @@ export default {
                 age -= 1
             }
             return age;
+        },
 
+        formatAge(knight) {
+            
+            return this.getAgeByBirthday(knight.birthday)
+            
         },
 
         formatWeaponsAmount(weapons){
@@ -94,12 +100,20 @@ export default {
         },
 
         formatAttack(knight){
-            return 'ataque'
+            
+            let equippedWeapon = knight.weapons.find( (weapon) => {
+                return weapon.equipped;
+            });
+
+            return 10 + this.getModFunction(knight.attributes[knight.keyAttribute]) + equippedWeapon.mod;
         },
 
         formatExp(knight){
-            return 'ataque'
-        }
+
+            let age = this.getAgeByBirthday(knight.birthday);
+
+            return Math.floor((age - 7) * Math.pow(22, 1.45));
+        },
 
     },
 }
