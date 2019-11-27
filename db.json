@@ -66,5 +66,95 @@
             },    
             "keyAttribute": "dexterity"
         }
+    ],
+    "heroes": [
+        {
+            "name": "Ygritte",
+            "nickname": "Selvagem",
+            "birthday": "09/03/2004",
+            "weapons": [
+                {
+                "name": "arrow",
+                "mod": 2,
+                "attr": "dexterity",
+                "equipped": true
+                }
+            ],
+            "attributes": {
+                "strength": 11,
+                "dexterity": 18,
+                "constitution": 11,
+                "intelligence": 10,
+                "wisdom": 16,
+                "charisma": 9
+            },    
+            "keyAttribute": "dexterity"
+        },
+        {
+            "name": "Ned Stark",
+            "nickname": "Ned",
+            "birthday": "30/04/1972",
+            "weapons": [
+                {
+                "name": "sword",
+                "mod": 2,
+                "attr": "strength",
+                "equipped": true
+                }
+            ],
+            "attributes": {
+                "strength": 15,
+                "dexterity": 14,
+                "constitution": 19,
+                "intelligence": 17,
+                "wisdom": 16,
+                "charisma": 19
+            },    
+            "keyAttribute": "intelligence"
+        },
+        {
+            "name": "Tywin Lannister",
+            "nickname": "O Velho Leão",
+            "birthday": "17/12/1962",
+            "weapons": [
+                {
+                "name": "dagger",
+                "mod": 2,
+                "attr": "dexterity",
+                "equipped": true
+                }
+            ],
+            "attributes": {
+                "strength": 7,
+                "dexterity": 10,
+                "constitution": 6,
+                "intelligence": 19,
+                "wisdom": 19,
+                "charisma": 2
+            },    
+            "keyAttribute": "wisdom"
+        },
+        {
+            "name": "Robb Stark",
+            "nickname": "Jovem Lobo",
+            "birthday": "17/12/1998",
+            "weapons": [
+                {
+                "name": "sword",
+                "mod": 4,
+                "attr": "constitution",
+                "equipped": true
+                }
+            ],
+            "attributes": {
+                "strength": 13,
+                "dexterity": 14,
+                "constitution": 17,
+                "intelligence": 15,
+                "wisdom": 15,
+                "charisma": 13
+            },    
+            "keyAttribute": "wisdom"
+        }
     ]
 }

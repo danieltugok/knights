@@ -1,30 +1,32 @@
 <template>
-    
-    <div class="table-knights">
-        <v-data-table
-            :headers="headers"
-            :items="knightList"
-            :no-data-text="'Nenhum item encontrado'"
-            item-key="name"
-        >
-            <template v-slot:item.age="{ item }">
-                {{ formatAge(item) }}
-            </template>
+    <div>
+        <v-subheader class="title">Listar Knights</v-subheader>
+        <div class="table-knights">
+            <v-data-table
+                :headers="headers"
+                :items="knightList"
+                :no-data-text="'Nenhum item encontrado'"
+                item-key="name"
+            >
+                <template v-slot:item.age="{ item }">
+                    {{ formatAge(item) }}
+                </template>
 
-            <template v-slot:item.weaponsAmount="{ item }">
-                {{ formatWeaponsAmount(item.weapons) }}
-            </template>
+                <template v-slot:item.weaponsAmount="{ item }">
+                    {{ formatWeaponsAmount(item.weapons) }}
+                </template>
 
-            <template v-slot:item.atack="{ item }">
-                {{ formatAttack(item) }}
-            </template>
+                <template v-slot:item.atack="{ item }">
+                    {{ formatAttack(item) }}
+                </template>
 
-            <template v-slot:item.exp="{ item }">
-                {{ formatExp(item) }}
-            </template>
-        </v-data-table>
+                <template v-slot:item.exp="{ item }">
+                    {{ formatExp(item) }}
+                </template>
+            </v-data-table>
+        </div>
+        
     </div>
-    
 </template>
 
 <script>
@@ -123,6 +125,6 @@ export default {
     .table-knights {
         padding: 30px;
         background-color: #585858;
-        margin: 75px;
+        margin: 20px;
     }
 </style>
