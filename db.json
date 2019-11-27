@@ -7,7 +7,7 @@
             "weapons": [
                 {
                 "name": "sword",
-                "mod": 3,
+                "mod": 4,
                 "attr": "strength",
                 "equipped": true
                 }
@@ -41,6 +41,28 @@
                 "intelligence": 16,
                 "wisdom": 15,
                 "charisma": 18
+            },    
+            "keyAttribute": "strength"
+        },
+        {
+            "name": "Brienne de Tarth",
+            "nickname": "A Donzela de Tarth",
+            "birthday": "27/11/2000",
+            "weapons": [
+                {
+                "name": "sword",
+                "mod": 4,
+                "attr": "strength",
+                "equipped": true
+                }
+            ],
+            "attributes": {
+                "strength": 13,
+                "dexterity": 13,
+                "constitution": 17,
+                "intelligence": 17,
+                "wisdom": 16,
+                "charisma": 10
             },    
             "keyAttribute": "strength"
         }
