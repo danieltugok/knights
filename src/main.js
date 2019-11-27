@@ -3,7 +3,6 @@ import App from './App.vue'
 import vuetify from './plugins/vuetify';
 import VueRouter from 'vue-router';
 
-import ContentCreateKnight from './components/ContentCreateKnight';
 import ContentListKnights from './components/ContentListKnights';
 import ContentHallOfHeroes from './components/ContentHallOfHeroes';
 
@@ -11,7 +10,6 @@ Vue.config.productionTip = false
 Vue.use(VueRouter);
 
 const routes = [
-    { path: '/create-knight', component: ContentCreateKnight },
     { path: '/get-knights', component: ContentListKnights },
     { path: '/get-hall-of-heroes', component: ContentHallOfHeroes },
 ]
