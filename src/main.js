@@ -3,15 +3,17 @@ import App from './App.vue'
 import vuetify from './plugins/vuetify';
 import VueRouter from 'vue-router';
 
-import ContentListKnights from './components/ContentListKnights';
-import ContentHallOfHeroes from './components/ContentHallOfHeroes';
+import ContentCreateKnights from './components/ContentCreateKnights';
+import ContentListKnights   from './components/ContentListKnights';
+import ContentHallOfHeroes  from './components/ContentHallOfHeroes';
 
 Vue.config.productionTip = false
 Vue.use(VueRouter);
 
 const routes = [
-    { path: '/get-knights', component: ContentListKnights },
-    { path: '/get-hall-of-heroes', component: ContentHallOfHeroes },
+    { path: '/create-knights'    , component: ContentCreateKnights },
+    { path: '/get-knights'       , component: ContentListKnights },
+    { path: '/get-hall-of-heroes', component: ContentHallOfHeroes }
 ]
 
 const router = new VueRouter({

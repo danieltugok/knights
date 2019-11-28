@@ -2,35 +2,29 @@
     <div>
         <v-subheader class="title">Listar Knights</v-subheader>
 
-        <div >
-            
-            <DialogCreateKnights/>
+        <div class="table-knight">
+            <v-data-table
+                :headers="headers"
+                :items="knightList"
+                :no-data-text="'Nenhum item encontrado'"
+                item-key="name"
+            >
+                <template v-slot:item.age="{ item }">
+                    {{ formatAge(item) }}
+                </template>
 
-            <div class="table-knight">
-                <v-data-table
-                    :headers="headers"
-                    :items="knightList"
-                    :no-data-text="'Nenhum item encontrado'"
-                    item-key="name"
-                >
-                    <template v-slot:item.age="{ item }">
-                        {{ formatAge(item) }}
-                    </template>
+                <template v-slot:item.weaponsAmount="{ item }">
+                    {{ formatWeaponsAmount(item.weapons) }}
+                </template>
 
-                    <template v-slot:item.weaponsAmount="{ item }">
-                        {{ formatWeaponsAmount(item.weapons) }}
-                    </template>
+                <template v-slot:item.atack="{ item }">
+                    {{ formatAttack(item) }}
+                </template>
 
-                    <template v-slot:item.atack="{ item }">
-                        {{ formatAttack(item) }}
-                    </template>
-
-                    <template v-slot:item.exp="{ item }">
-                        {{ formatExp(item) }}
-                    </template>
-                </v-data-table>
-            </div>
-
+                <template v-slot:item.exp="{ item }">
+                    {{ formatExp(item) }}
+                </template>
+            </v-data-table>
         </div>
         
     </div>
@@ -38,13 +32,8 @@
 
 <script>
 import getMod from '../functions/mod'
-import DialogCreateKnights from './DialogCreateKnights.vue'
 
 export default {
-
-    components: {
-        DialogCreateKnights
-    },
     
     data() {
         return {
@@ -67,6 +56,10 @@ export default {
     },
 
     methods: {
+
+        onDialogCreateKnightsCreated() {
+
+        },
         
         listKnights() {
             const axios = require('axios');
