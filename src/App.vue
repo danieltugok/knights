@@ -7,38 +7,44 @@
         >
             <v-list dense>
 
-                <v-list-item link>
-                    <v-list-item-action>
-                        <v-icon>mdi-sword-cross</v-icon>
-                    </v-list-item-action>
-                    <v-list-item-content>
-                        <v-list-item-title>
-                            <router-link to="/create-knights">Cadastrar Knight</router-link>
-                        </v-list-item-title>
-                    </v-list-item-content>
-                </v-list-item>
+                <router-link to="/create-knights">
+                    <v-list-item link>
+                        <v-list-item-action>
+                            <v-icon>mdi-sword</v-icon>
+                        </v-list-item-action>
+                        <v-list-item-content>
+                            <v-list-item-title>
+                                Cadastrar Knight
+                            </v-list-item-title>
+                        </v-list-item-content>
+                    </v-list-item>
+                </router-link>
 
-                <v-list-item link>
-                    <v-list-item-action>
-                        <v-icon>mdi-sword-cross</v-icon>
-                    </v-list-item-action>
-                    <v-list-item-content>
-                        <v-list-item-title>
-                            <router-link to="/get-knights">Listar Knights</router-link>
-                        </v-list-item-title>
-                    </v-list-item-content>
-                </v-list-item>
-            
-                <v-list-item link>
-                    <v-list-item-action>
-                        <v-icon>mdi-shield-cross</v-icon>
-                    </v-list-item-action>
-                    <v-list-item-content>
-                        <v-list-item-title>
-                            <router-link to="/get-hall-of-heroes">Hall of Heroes</router-link>
-                        </v-list-item-title>
-                    </v-list-item-content>
-                </v-list-item>
+                <router-link to="/get-knights">
+                    <v-list-item link>
+                        <v-list-item-action>
+                            <v-icon>mdi-sword-cross</v-icon>
+                        </v-list-item-action>
+                        <v-list-item-content>
+                            <v-list-item-title>
+                                Listar Knights
+                            </v-list-item-title>
+                        </v-list-item-content>
+                    </v-list-item>
+                </router-link>
+
+                <router-link to="/get-hall-of-heroes">
+                    <v-list-item link>
+                        <v-list-item-action>
+                            <v-icon>mdi-shield-cross</v-icon>
+                        </v-list-item-action>
+                        <v-list-item-content>
+                            <v-list-item-title>
+                                Hall of Heroes
+                            </v-list-item-title>
+                        </v-list-item-content>
+                    </v-list-item>
+                </router-link>
 
             </v-list>
         </v-navigation-drawer>
@@ -53,10 +59,7 @@
 
         <v-content>
             <router-view />
-        </v-content>
-
-        <v-footer app><span>&copy; 2019</span></v-footer>
-    
+        </v-content>    
     </v-app>
 
 </template>
