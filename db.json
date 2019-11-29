@@ -1,6 +1,7 @@
 {
   "knights": [
     {
+      "id": "9c076f70-122e-11ea-8ab7-0d733cac29b1",
       "name": "John Snow",
       "nickname": "Bastardo",
       "birthday": "10/08/2002",
@@ -23,28 +24,7 @@
       "keyAttribute": "strength"
     },
     {
-      "name": "Jaime Lannister",
-      "nickname": "Regicida",
-      "birthday": "10/08/1985",
-      "weapons": [
-        {
-          "name": "axe",
-          "mod": 2,
-          "attr": "strength",
-          "equipped": true
-        }
-      ],
-      "attributes": {
-        "strength": 14,
-        "dexterity": 13,
-        "constitution": 18,
-        "intelligence": 16,
-        "wisdom": 15,
-        "charisma": 18
-      },
-      "keyAttribute": "charisma"
-    },
-    {
+      "id": "9c076f70-122e-11ea-8po0-0d74fcac29b1",
       "name": "Brienne de Tarth",
       "nickname": "A Donzela de Tarth",
       "birthday": "27/11/2000",
@@ -67,7 +47,7 @@
       "keyAttribute": "dexterity"
     },
     {
-      "id": 1,
+      "id": "9c076f70-122e-29kj-8ab7-0d74fcac29b1",
       "name": "Arya Stark",
       "nickname": "Ninguém",
       "birthday": "31/08/2005",
@@ -209,27 +189,27 @@
       "keyAttribute": "wisdom"
     },
     {
-      "id": "f3f678b0-123e-11ea-aeb6-81a2fec29c06",
-      "name": "1",
-      "nickname": "1",
-      "birthday": "28/11/2019",
+      "id": "9c076f70-165e-11ea-8ab7-0d74fcac29b1",
+      "name": "Jaime Lannister",
+      "nickname": "Regicida",
+      "birthday": "10/08/1985",
       "weapons": [
         {
-          "name": "1",
-          "mod": 1,
-          "attr": "wisdom",
+          "name": "axe",
+          "mod": 2,
+          "attr": "strength",
           "equipped": true
         }
       ],
       "attributes": {
-        "strength": 11,
-        "dexterity": 1,
-        "constitution": 1,
-        "intelligence": 1,
-        "wisdom": 1,
-        "charisma": 11
+        "strength": 14,
+        "dexterity": 13,
+        "constitution": 18,
+        "intelligence": 16,
+        "wisdom": 15,
+        "charisma": 18
       },
-      "keyAttribute": "dexterity"
+      "keyAttribute": "charisma"
     }
   ]
 }

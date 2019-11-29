@@ -2,13 +2,13 @@
     <div>
         <v-subheader class="title">cadastrar knight</v-subheader>
         
-        <v-form class="px-3 form" >
+        <v-form ref="form" class="px-3 form" >
             <v-row>
                 <v-col cols="6">
-                    <v-text-field label="Nome" v-model="nameValue" />
+                    <v-text-field label="Nome" v-model="nameValue" :rules="inputRules"/>
                 </v-col>
                 <v-col cols="6">
-                    <v-text-field label="Apelido" v-model="nicknameValue" />
+                    <v-text-field label="Apelido" v-model="nicknameValue" :rules="inputRules"/>
                 </v-col>
             </v-row>
             <v-row>
@@ -20,6 +20,7 @@
                                 :value="formattedDateBirthValue"
                                 readonly
                                 v-on="on"
+                                :rules="inputRules"
                             />
                         </template>
                         
@@ -35,6 +36,7 @@
                         v-model="keyAttributeValue"
                         :items="attributeList"
                         label="Selecione o atributo chave do knight"
+                        :rules="inputRules"
                     />
                 </v-col>
             </v-row>
@@ -46,6 +48,7 @@
                             type="number"
                             label="Strength"
                             v-model.number="attrStrengthValue"
+                            :rules="inputNumberRules"
                         />
                     </v-col>
                     <v-col cols="2">
@@ -53,6 +56,7 @@
                             type="number"
                             label="Dexterity"
                             v-model.number="attrDexterityValue"
+                            :rules="inputNumberRules"
                         />
                     </v-col>
                     <v-col cols="2">
@@ -60,6 +64,7 @@
                             type="number"
                             label="Constitution"
                             v-model.number="attrConstitutionValue"
+                            :rules="inputNumberRules"
                         />
                     </v-col>
                     <v-col cols="2">
@@ -67,6 +72,7 @@
                             type="number"
                             label="Intelligence"
                             v-model.number="attrIntelligenceValue"
+                            :rules="inputNumberRules"
                         />
                     </v-col>
                     <v-col cols="2">
@@ -74,6 +80,7 @@
                             type="number"
                             label="Wisdom"
                             v-model.number="attrWisdomValue"
+                            :rules="inputNumberRules"
                         />
                     </v-col>
                     <v-col cols="2">
@@ -81,6 +88,7 @@
                             type="number"
                             label="Charisma"
                             v-model.number="attrCharismaValue"
+                            :rules="inputNumberRules"
                         />
                     </v-col>
                 </v-row>
@@ -120,6 +128,15 @@ export default {
             attrCharismaValue      : null,
             weaponList             : [],
 
+            inputRules: [
+                value => !!value || 'O campo é obrigatório.'
+            ],
+
+            inputNumberRules: [
+                value => !!value || 'O campo é obrigatório.',
+                value => value > 0 || 'O valor deve ser maior que 0.'
+            ],
+
             attributeList: AttributeList
         }
     },
@@ -142,15 +159,19 @@ export default {
     methods: {
         
         create() {
-            const axios = require('axios');
+            if (this.$refs.form.validate()) {
+                const axios = require('axios');
             
-            axios.post('http://localhost:3000/knights', this.defineCreateParams())
-                .then( (response) => {
-                    this.afterWeaponCreated();
-                })
-                .catch( (error) => {
-                    console.error(error);
-                });
+                axios.post('http://localhost:3000/knights', this.defineCreateParams())
+                    .then( (response) => {
+                        this.afterWeaponCreated();
+                    })
+                    .catch( (error) => {
+                        console.error(error);
+                    });
+            }
+
+            
         },
 
         defineCreateParams () {
@@ -179,21 +200,7 @@ export default {
         },
 
         forceFormReset () {
-            this.nameValue              = null;
-            this.nicknameValue          = null;
-            this.dateBirthValue         = null;
-            this.formattedDateBirthValue = null;
-            this.keyAttributeValue      = null;
-
-            this.attrStrengthValue     = null;
-            this.attrDexterityValue    = null;
-            this.attrConstitutionValue = null;
-            this.attrIntelligenceValue = null;
-            this.attrWisdomValue       = null;
-            this.attrCharismaValue     = null;
-
-            this.weaponList = [];
-            this.$refs.boxWeapon.forceReset();
+            this.$refs.form.reset();
         }
 
     }
