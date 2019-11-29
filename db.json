@@ -1,160 +1,235 @@
 {
-    "knights": [
+  "knights": [
+    {
+      "name": "John Snow",
+      "nickname": "Bastardo",
+      "birthday": "10/08/2002",
+      "weapons": [
         {
-            "name": "John Snow",
-            "nickname": "Bastardo",
-            "birthday": "10/08/2002",
-            "weapons": [
-                {
-                "name": "sword",
-                "mod": 4,
-                "attr": "strength",
-                "equipped": true
-                }
-            ],
-            "attributes": {
-                "strength": 16,
-                "dexterity": 17,
-                "constitution": 18,
-                "intelligence": 10,
-                "wisdom": 13,
-                "charisma": 15
-            },    
-            "keyAttribute": "strength"
-        },
-        {
-            "name": "Jaime Lannister",
-            "nickname": "Regicida",
-            "birthday": "10/08/1985",
-            "weapons": [
-                {
-                "name": "axe",
-                "mod": 2,
-                "attr": "strength",
-                "equipped": true
-                }
-            ],
-            "attributes": {
-                "strength": 14,
-                "dexterity": 13,
-                "constitution": 18,
-                "intelligence": 16,
-                "wisdom": 15,
-                "charisma": 18
-            },    
-            "keyAttribute": "charisma"
-        },
-        {
-            "name": "Brienne de Tarth",
-            "nickname": "A Donzela de Tarth",
-            "birthday": "27/11/2000",
-            "weapons": [
-                {
-                "name": "sword",
-                "mod": 4,
-                "attr": "strength",
-                "equipped": true
-                }
-            ],
-            "attributes": {
-                "strength": 13,
-                "dexterity": 13,
-                "constitution": 17,
-                "intelligence": 17,
-                "wisdom": 16,
-                "charisma": 10
-            },    
-            "keyAttribute": "dexterity"
+          "name": "sword",
+          "mod": 4,
+          "attr": "strength",
+          "equipped": true
         }
-    ],
-    "heroes": [
+      ],
+      "attributes": {
+        "strength": 16,
+        "dexterity": 17,
+        "constitution": 18,
+        "intelligence": 10,
+        "wisdom": 13,
+        "charisma": 15
+      },
+      "keyAttribute": "strength"
+    },
+    {
+      "name": "Jaime Lannister",
+      "nickname": "Regicida",
+      "birthday": "10/08/1985",
+      "weapons": [
         {
-            "name": "Ygritte",
-            "nickname": "Selvagem",
-            "birthday": "09/03/2004",
-            "weapons": [
-                {
-                "name": "arrow",
-                "mod": 2,
-                "attr": "dexterity",
-                "equipped": true
-                }
-            ],
-            "attributes": {
-                "strength": 11,
-                "dexterity": 18,
-                "constitution": 11,
-                "intelligence": 10,
-                "wisdom": 16,
-                "charisma": 9
-            },    
-            "keyAttribute": "dexterity"
-        },
-        {
-            "name": "Ned Stark",
-            "nickname": "Ned",
-            "birthday": "30/04/1972",
-            "weapons": [
-                {
-                "name": "sword",
-                "mod": 2,
-                "attr": "strength",
-                "equipped": true
-                }
-            ],
-            "attributes": {
-                "strength": 15,
-                "dexterity": 14,
-                "constitution": 19,
-                "intelligence": 17,
-                "wisdom": 16,
-                "charisma": 19
-            },    
-            "keyAttribute": "intelligence"
-        },
-        {
-            "name": "Tywin Lannister",
-            "nickname": "O Velho Leão",
-            "birthday": "17/12/1962",
-            "weapons": [
-                {
-                "name": "dagger",
-                "mod": 2,
-                "attr": "dexterity",
-                "equipped": true
-                }
-            ],
-            "attributes": {
-                "strength": 7,
-                "dexterity": 10,
-                "constitution": 6,
-                "intelligence": 19,
-                "wisdom": 19,
-                "charisma": 2
-            },    
-            "keyAttribute": "wisdom"
-        },
-        {
-            "name": "Robb Stark",
-            "nickname": "Jovem Lobo",
-            "birthday": "17/12/1998",
-            "weapons": [
-                {
-                "name": "sword",
-                "mod": 4,
-                "attr": "constitution",
-                "equipped": true
-                }
-            ],
-            "attributes": {
-                "strength": 13,
-                "dexterity": 14,
-                "constitution": 17,
-                "intelligence": 15,
-                "wisdom": 15,
-                "charisma": 13
-            },    
-            "keyAttribute": "wisdom"
+          "name": "axe",
+          "mod": 2,
+          "attr": "strength",
+          "equipped": true
         }
-    ]
+      ],
+      "attributes": {
+        "strength": 14,
+        "dexterity": 13,
+        "constitution": 18,
+        "intelligence": 16,
+        "wisdom": 15,
+        "charisma": 18
+      },
+      "keyAttribute": "charisma"
+    },
+    {
+      "name": "Brienne de Tarth",
+      "nickname": "A Donzela de Tarth",
+      "birthday": "27/11/2000",
+      "weapons": [
+        {
+          "name": "sword",
+          "mod": 4,
+          "attr": "strength",
+          "equipped": true
+        }
+      ],
+      "attributes": {
+        "strength": 13,
+        "dexterity": 13,
+        "constitution": 17,
+        "intelligence": 17,
+        "wisdom": 16,
+        "charisma": 10
+      },
+      "keyAttribute": "dexterity"
+    },
+    {
+      "id": 1,
+      "name": "Arya Stark",
+      "nickname": "Ninguém",
+      "birthday": "31/08/2005",
+      "weapons": [
+        {
+          "name": "Needle",
+          "mod": 4,
+          "attr": "dexterity",
+          "equipped": true
+        }
+      ],
+      "attributes": {
+        "strength": 10,
+        "dexterity": 15,
+        "constitution": 9,
+        "intelligence": 17,
+        "wisdom": 11,
+        "charisma": 7
+      },
+      "keyAttribute": "intelligence"
+    },
+    {
+      "id": "9c076f70-122e-11ea-8ab7-0d74fcac29b1",
+      "name": "Gendry",
+      "nickname": "O Touro",
+      "birthday": "04/08/2002",
+      "weapons": [
+        {
+          "name": "axe",
+          "mod": 2,
+          "attr": "strength",
+          "equipped": true
+        },
+        {
+          "name": "sword",
+          "mod": 1,
+          "attr": "strength",
+          "equipped": false
+        }
+      ],
+      "attributes": {
+        "strength": 14,
+        "dexterity": 11,
+        "constitution": 12,
+        "intelligence": 10,
+        "wisdom": 14,
+        "charisma": 16
+      },
+      "keyAttribute": "charisma"
+    }
+  ],
+  "heroes": [
+    {
+      "name": "Ygritte",
+      "nickname": "Selvagem",
+      "birthday": "09/03/2004",
+      "weapons": [
+        {
+          "name": "arrow",
+          "mod": 2,
+          "attr": "dexterity",
+          "equipped": true
+        }
+      ],
+      "attributes": {
+        "strength": 11,
+        "dexterity": 18,
+        "constitution": 11,
+        "intelligence": 10,
+        "wisdom": 16,
+        "charisma": 9
+      },
+      "keyAttribute": "dexterity"
+    },
+    {
+      "name": "Ned Stark",
+      "nickname": "Ned",
+      "birthday": "30/04/1972",
+      "weapons": [
+        {
+          "name": "sword",
+          "mod": 2,
+          "attr": "strength",
+          "equipped": true
+        }
+      ],
+      "attributes": {
+        "strength": 15,
+        "dexterity": 14,
+        "constitution": 19,
+        "intelligence": 17,
+        "wisdom": 16,
+        "charisma": 19
+      },
+      "keyAttribute": "intelligence"
+    },
+    {
+      "name": "Tywin Lannister",
+      "nickname": "O Velho Leão",
+      "birthday": "17/12/1962",
+      "weapons": [
+        {
+          "name": "dagger",
+          "mod": 2,
+          "attr": "dexterity",
+          "equipped": true
+        }
+      ],
+      "attributes": {
+        "strength": 7,
+        "dexterity": 10,
+        "constitution": 6,
+        "intelligence": 19,
+        "wisdom": 19,
+        "charisma": 2
+      },
+      "keyAttribute": "wisdom"
+    },
+    {
+      "name": "Robb Stark",
+      "nickname": "Jovem Lobo",
+      "birthday": "17/12/1998",
+      "weapons": [
+        {
+          "name": "sword",
+          "mod": 4,
+          "attr": "constitution",
+          "equipped": true
+        }
+      ],
+      "attributes": {
+        "strength": 13,
+        "dexterity": 14,
+        "constitution": 17,
+        "intelligence": 15,
+        "wisdom": 15,
+        "charisma": 13
+      },
+      "keyAttribute": "wisdom"
+    },
+    {
+      "id": "f3f678b0-123e-11ea-aeb6-81a2fec29c06",
+      "name": "1",
+      "nickname": "1",
+      "birthday": "28/11/2019",
+      "weapons": [
+        {
+          "name": "1",
+          "mod": 1,
+          "attr": "wisdom",
+          "equipped": true
+        }
+      ],
+      "attributes": {
+        "strength": 11,
+        "dexterity": 1,
+        "constitution": 1,
+        "intelligence": 1,
+        "wisdom": 1,
+        "charisma": 11
+      },
+      "keyAttribute": "dexterity"
+    }
+  ]
 }

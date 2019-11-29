@@ -24,6 +24,12 @@
                 <template v-slot:item.exp="{ item }">
                     {{ formatExp(item) }}
                 </template>
+
+                <template v-slot:item.delete="{ item }">
+                    <v-btn text class="error mx-0 my-5" @click="onDeleteKnightClick(item)" small>
+                        <v-icon small>mdi-trash-can-outline</v-icon>
+                    </v-btn>
+                </template>
             </v-data-table>
         </div>
         
@@ -44,6 +50,7 @@ export default {
                 { text: 'Atributo', value: 'keyAttribute' },
                 { text: 'Ataque'  , value: 'atack' },
                 { text: 'Exp'     , value: 'exp' },
+                { text: 'Excluir' , value: 'delete' },
             ],
 
             knightList: [],
@@ -57,8 +64,40 @@ export default {
 
     methods: {
 
-        onDialogCreateKnightsCreated() {
+        onDeleteKnightClick(knight) {
+            
+            
+            this.createHero(knight)
+                .then( () => {
+                    this.deleteKnight(knight)
+                })
+        },
 
+        createHero(hero) {
+            const axios = require('axios');
+            
+            return new Promise((resolve, reject) => {
+                
+                axios.post('http://localhost:3000/heroes', hero)
+                    .then( (response) => {
+                        resolve();
+                    })
+                    .catch( (error) => {
+                        reject(error);
+                    });
+            })
+        },
+
+        deleteKnight(knight) {
+            const axios = require('axios');
+
+            axios.delete('http://localhost:3000/knights/'+knight.id)
+                .then( (response) => {
+                    this.listKnights();
+                })
+                .catch( (error) => {
+                    console.error(error);
+                });
         },
         
         listKnights() {
