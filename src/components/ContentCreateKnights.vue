@@ -96,7 +96,7 @@
             
             <BoxWeaponList ref="boxWeapon" v-model="weaponList"/>
 
-            <v-btn text class="primary mx-0 my-5" @click="create">Cadastrar</v-btn>
+            <v-btn text class="primary mx-0 my-5" @click="onCreateClicked">Cadastrar</v-btn>
         </v-form>
 
     </div>
@@ -158,7 +158,7 @@ export default {
 
     methods: {
         
-        create() {
+        onCreateClicked() {
             if (this.$refs.form.validate()) {
                 const axios = require('axios');
             

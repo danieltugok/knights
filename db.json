@@ -3,7 +3,7 @@
     {
       "id": "9c076f70-122e-11ea-8ab7-0d733cac29b1",
       "name": "John Snow",
-      "nickname": "Bastardo",
+      "nickname": "bastardo",
       "birthday": "10/08/2002",
       "weapons": [
         {
@@ -210,6 +210,35 @@
         "charisma": 18
       },
       "keyAttribute": "charisma"
+    },
+    {
+      "id": "e3ac0190-126c-11ea-bb94-03489e89ab0c",
+      "name": "Khal Drogo",
+      "nickname": "Khal",
+      "birthday": "20/09/1979",
+      "weapons": [
+        {
+          "name": "Axe",
+          "mod": 2,
+          "attr": "strength",
+          "equipped": true
+        },
+        {
+          "name": "Club",
+          "mod": 1,
+          "attr": "strength",
+          "equipped": false
+        }
+      ],
+      "attributes": {
+        "strength": 18,
+        "dexterity": 16,
+        "constitution": 17,
+        "intelligence": 14,
+        "wisdom": 15,
+        "charisma": 2
+      },
+      "keyAttribute": "strength"
     }
   ]
 }

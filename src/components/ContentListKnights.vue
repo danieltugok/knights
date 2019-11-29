@@ -25,6 +25,10 @@
                     {{ formatExp(item) }}
                 </template>
 
+                <template v-slot:item.update="{ item }">
+                    <DialogUpdateNickname :knight="item"/>
+                </template>
+
                 <template v-slot:item.delete="{ item }">
                     <v-btn text class="error mx-0 my-5" @click="onDeleteKnightClick(item)" small>
                         <v-icon small>mdi-trash-can-outline</v-icon>
@@ -38,9 +42,14 @@
 
 <script>
 import getMod from '../functions/mod'
+import DialogUpdateNickname from './DialogUpdateNickname'
 
 export default {
     
+    components: {
+        DialogUpdateNickname
+    },
+
     data() {
         return {
             headers: [
@@ -50,6 +59,7 @@ export default {
                 { text: 'Atributo', value: 'keyAttribute' },
                 { text: 'Ataque'  , value: 'atack' },
                 { text: 'Exp'     , value: 'exp' },
+                { text: 'Alterar' , value: 'update' },
                 { text: 'Excluir' , value: 'delete' },
             ],
 
@@ -66,6 +76,14 @@ export default {
 
         onDeleteKnightClick(knight) {
             
+            
+            this.createHero(knight)
+                .then( () => {
+                    this.deleteKnight(knight)
+                })
+        },
+
+        onEditKnightClick(knight) {
             
             this.createHero(knight)
                 .then( () => {
