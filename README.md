@@ -10,7 +10,20 @@ npm install
 npm run serve
 ```
 
+### Install json-server
+```
+sudo npm install -g json-server
+```
+
 ### Start json-server
 ```
 json-server --watch db.json
+```
+
+
+POSSIVEIS PROBLEMAS:
+atualizar node: 
+```
+sudo npm install n -g
+sudo n stable
 ```
