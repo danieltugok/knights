@@ -2,7 +2,7 @@
   "knights": [
     {
       "id": "9c076f70-122e-11ea-8ab7-0d733cac29b1",
-      "name": "John Snow",
+      "name": "John Snow5",
       "nickname": "bastardo",
       "birthday": "10/08/2002",
       "weapons": [
@@ -22,29 +22,6 @@
         "charisma": 15
       },
       "keyAttribute": "strength"
-    },
-    {
-      "id": "9c076f70-122e-11ea-8po0-0d74fcac29b1",
-      "name": "Brienne de Tarth",
-      "nickname": "A Donzela de Tarth",
-      "birthday": "27/11/2000",
-      "weapons": [
-        {
-          "name": "sword",
-          "mod": 4,
-          "attr": "strength",
-          "equipped": true
-        }
-      ],
-      "attributes": {
-        "strength": 13,
-        "dexterity": 13,
-        "constitution": 17,
-        "intelligence": 17,
-        "wisdom": 16,
-        "charisma": 10
-      },
-      "keyAttribute": "dexterity"
     },
     {
       "id": "9c076f70-122e-29kj-8ab7-0d74fcac29b1",
@@ -97,6 +74,29 @@
         "charisma": 16
       },
       "keyAttribute": "charisma"
+    },
+    {
+      "id": "6c36b780-68c6-11ea-91de-c1353964a388",
+      "name": "Daniel Kogut1",
+      "nickname": "Kog",
+      "birthday": "01/03/1920",
+      "weapons": [
+        {
+          "name": "Machado",
+          "mod": 15,
+          "attr": "strength",
+          "equipped": true
+        }
+      ],
+      "attributes": {
+        "strength": 96,
+        "dexterity": 86,
+        "constitution": 75,
+        "intelligence": 88,
+        "wisdom": 89,
+        "charisma": 90
+      },
+      "keyAttribute": "strength"
     }
   ],
   "heroes": [
@@ -239,6 +239,29 @@
         "charisma": 2
       },
       "keyAttribute": "strength"
+    },
+    {
+      "id": "9c076f70-122e-11ea-8po0-0d74fcac29b1",
+      "name": "Brienne de Tarth",
+      "nickname": "A Donzela de Tarth",
+      "birthday": "27/11/2000",
+      "weapons": [
+        {
+          "name": "sword",
+          "mod": 4,
+          "attr": "strength",
+          "equipped": true
+        }
+      ],
+      "attributes": {
+        "strength": 13,
+        "dexterity": 13,
+        "constitution": 17,
+        "intelligence": 17,
+        "wisdom": 16,
+        "charisma": 10
+      },
+      "keyAttribute": "dexterity"
     }
   ]
 }

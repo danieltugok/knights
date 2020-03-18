@@ -10,13 +10,16 @@
             </v-btn>
         </template>
         <v-card>
-            <v-card-title>Alteração de Apelido</v-card-title>
+
+            <v-card-title>Alteração de Nome / Apelido</v-card-title>
             <v-card-text>
                 <v-form ref="form" class="px-3">
+                    <v-text-field v-model="nameValue" label="Nome" :rules="inputRules"/>
                     <v-text-field v-model="nicknameValue" label="Apelido" :rules="inputRules"/>
                     <v-btn text class="success mx-0 mt-3" @click="onUpdateClicked">Alterar</v-btn>
                 </v-form>
             </v-card-text>
+
         </v-card>
         
     </v-dialog>
@@ -36,12 +39,14 @@ export default {
             inputRules: [
                 value => !!value || 'O campo é obrigatório.'
             ],
+            nameValue: null,
             nicknameValue: null,
             dialog: false
         }
     },
     
     mounted() {
+        this.nameValue = this.knight.name;
         this.nicknameValue = this.knight.nickname;
     },
 
@@ -51,9 +56,11 @@ export default {
                 const axios = require('axios');
             
                 axios.patch('http://localhost:3000/knights/'+this.knight.id,
-                    {nickname: this.nicknameValue})
+                    {name: this.nameValue},
+                    {nickname: this.nicknameValue}
+                    )
                     .then( (response) => {
-                        this.afterUpdateKnight();
+                        this.afterUpdateKnight( response);
                     })
                     .catch( (error) => {
                         console.error(error);
@@ -62,8 +69,11 @@ export default {
             }
         },
 
-        afterUpdateKnight() {
+        afterUpdateKnight(response) {
             this.dialog = false;
+            this.$emit('reload');
+            console.log(response);
+            // location.reload();
         }
     }
 }

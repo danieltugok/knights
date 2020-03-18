@@ -161,6 +161,8 @@ export default {
         onCreateClicked() {
             if (this.$refs.form.validate()) {
                 const axios = require('axios');
+
+                console.log(this.defineCreateParams());
             
                 axios.post('http://localhost:3000/knights', this.defineCreateParams())
                     .then( (response) => {

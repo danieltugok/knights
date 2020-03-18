@@ -2,13 +2,17 @@
     <div>
         <v-subheader class="title">Listar Knights</v-subheader>
 
+        <a href="#" @click.prevent="teste">testeeeee</a>
+
         <div class="table-knight">
             <v-data-table
                 :headers="headers"
                 :items="knightList"
                 :no-data-text="'Nenhum item encontrado'"
+                ref="table"
                 item-key="name"
             >
+                
                 <template v-slot:item.age="{ item }">
                     {{ formatAge(item) }}
                 </template>
@@ -26,7 +30,7 @@
                 </template>
 
                 <template v-slot:item.update="{ item }">
-                    <DialogUpdateNickname :knight="item"/>
+                    <DialogUpdateNickname :knight="item" @reload="updated"/>
                 </template>
 
                 <template v-slot:item.delete="{ item }">
@@ -73,6 +77,20 @@ export default {
     },
 
     methods: {
+
+        updated() {
+            const axios = require('axios');
+
+            axios.get('http://localhost:3000/knights')
+                .then( (response) => {
+                    this.knightList = response.data;
+                })
+                .catch( (error) => {
+                    console.error(error);
+                })
+
+
+        },
 
         onDeleteKnightClick(knight) {
             
