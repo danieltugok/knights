@@ -1,6 +1,6 @@
 # knights
 
-## Project setup
+## Project setup.
 ```
 npm install
 ```
